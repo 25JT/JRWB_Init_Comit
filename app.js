@@ -24,8 +24,10 @@ app.listen(port, () => {
 });
 
 
-// consulta de prueba 
+// // consulta de prueba 
 // conexion.query('SELECT * FROM cliente', (error, results) => {
 //     if (error) throw error;
+//     console.log("consutla de pruena exitosa");
+    
 //     console.log(results); // Muestra los resultados en la consola
 //   })

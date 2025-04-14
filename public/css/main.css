@@ -1,0 +1,138 @@
+.fugaz-one-regular {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.manjari-thin {
+    font-family: "Manjari", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body {
+    margin: 20px !important;
+}
+
+h1 {
+    color: white !important;
+    font-family: Fugaz One, sans-serif;
+
+}
+
+nav {
+    border: 2px solid black;
+    border-radius: 16px;
+    background-color: #00BFFF;
+}
+h2{
+    font-family: Fugaz One, sans-serif;
+    font-size: 5rem !important;
+}
+
+p{
+    text-align: justify;
+    font-family: manjari-thin, sans-serif;
+    font-size: 1.5rem;
+}
+
+/* From Uiverse.io by alexreyes091 */ 
+/*Boton nav*/ 
+/* From Uiverse.io by alexreyes091 */ 
+.btn {
+    margin: 5px !important;
+    border: rgb(255, 255, 255) 5px solid !important;
+    
+    font-weight: 700 !important;
+    background: #00BFFF !important;
+    color: rgb(255, 255, 255) !important;
+    cursor: pointer !important;
+    border-radius: 0.5rem;
+    border-bottom: 2px solid rgb(255, 255, 255) !important;
+    border-right: 2px solid rgb(255, 255, 255) !important;
+    border-top: 2px solid white !important;
+    border-left: 2px solid white !important;
+    transition-duration: 0.5s !important;
+    transition-property: border-top, border-left, border-bottom, border-right,
+      box-shadow !important;
+  }
+  
+  .btn:hover {
+    border-top: 2px solid #ffffff !important;
+    border-left: 2px solid rgb(255, 255, 255) !important ;
+    border-bottom: 2px solid #0099ff !important;
+    border-right: 2px solid #ffffff !important;
+    box-shadow: #82e0ffb0 5px 5px, #57d0f8ce 8px 8px,
+      #3cccfcb2 10px 10px !important;
+  }
+  
+  /*Boton nav fin*/ 
+
+  /*Pantallas medianas*/
+@media (max-width: 1024px) {
+    body {
+      margin: 10px !important;
+    }
+  
+    h1 {
+      font-size: 2.5rem !important;
+    }
+  
+    h2 {
+      font-size: 4rem !important;
+    }
+  
+    p {
+      font-size: 1.2rem;
+    }
+  
+    .btn {
+      font-size: 0.9rem !important;
+      padding: 8px 12px !important;
+    }
+  }
+  
+  /*Pantallas pequeñas*/
+  @media (max-width: 768px) {
+    body {
+      margin: 5px !important;
+    }
+  
+    h1 {
+      font-size: 2rem !important;
+    }
+  
+    h2 {
+      font-size: 3rem !important;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    .btn {
+      font-size: 0.8rem !important;
+      padding: 6px 10px !important;
+    }
+  }
+
+  /*Pantallas aun mas pequeñas*/
+  @media (max-width: 568px) {
+    body {
+      margin: 5px !important;
+    }
+     
+    h2 {
+      font-size: 2rem !important;
+    }
+  
+    p {
+      font-size: 1rem;
+      
+    }
+  
+    .btn {
+      font-size: 0.8rem !important;
+      padding: 6px 10px !important;
+    }
+  }
+  

@@ -1,1 +1,9 @@
 NOTAS 
+
+npm install express cors dotenv ejs mysql2 
+npm install nodemon -D
+
+uso de livereload
+
+animaciones
+ npm install animate.css --save
