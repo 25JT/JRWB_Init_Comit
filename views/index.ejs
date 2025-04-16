@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JR WEB</title>
   <link rel="stylesheet" href="/css/main.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -12,29 +14,57 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Manjari:wght@100;400;700&display=swap"
     rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="/Imagenes/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/Imagenes/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/Imagenes/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/Imagenes/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="/Imagenes/favicon/site.webmanifest" />
+
+
+<!-- SEO: TÍTULO Y DESCRIPCIÓN -->
+<meta name="title" content="JR WEB | Desarrollo Web Profesional">
+<meta name="description" content="Creamos páginas web atractivas, rápidas y optimizadas para negocios, emprendedores y proyectos personales. ¡Contáctanos!">
+<meta name="keywords" content="desarrollo web, páginas web, diseño web, SEO, tiendas online, landing page, contacto web, soluciones digitales, renta de autos, reservas, papelería, diseño responsive, optimización web, marketing digital, desarrollo a medida, aplicaciones web, gestión de clientes, administración de inventarios, venta online">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="author" content="Jhonier Dev">
+<meta name="robots" content="index, follow">
+
+<!-- META PARA COMPARTIR EN REDES (Open Graph / Facebook) -->
+<meta property="og:title" content="JR WEB | Desarrollo a tu medida">
+<meta property="og:description" content="Lleva tu idea a otro nivel con una página web profesional. ¡Nosotros lo hacemos por ti! ">
+<meta property="og:image" content="https://tusitio.com/imagen-og.jpg">
+<meta property="og:url" content="https://tusitio.com">
+<meta property="og:type" content="website">
+
+<!-- META PARA TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DESARROLLO WEB | JR WEB">
+<meta name="twitter:description" content="Webs profesionales para negocios y emprendedores.">
+<meta name="twitter:image" content="https://tusitio.com/imagen-twitter.jpg">
+
 
 </head>
 
 <body>
   <!--NAV-->
   <nav style="margin-bottom: 10%;">
-    <div class="container text-center"data-aos="fade-up" >
+    <div class="container text-center" data-aos="fade-up">
       <div class="row align-items-center">
         <div class="col">
 
 
-          <button class="btn">DISEÑOS</button>
+          <button class="btn"><a href="#diseños" style="text-decoration: none; color: white;">DISEÑOS</a></button>
         </div>
-        <div class="col ">
-          <h1 class="textlog">S</h1>
+        <div class="col">
+          <h1 class="textlog"></h1>
         </div>
         <div class="col">
           <!-- From Uiverse.io by alexreyes091 -->
-          <button class="btn">CONTACTO</button>
+          <button class="btn" onclick="wpp()">CONTACTO</button>
 
         </div>
       </div>
@@ -49,7 +79,7 @@
       <div class="row align-items-center">
         <div class="col">
           <div>
-            <h2 class="animate__animated animate__backInLeft " data-aos="fade-right" > DESARROLLO WEB</h2>
+            <h2 class="animate__animated animate__backInLeft " data-aos="fade-right"> DESARROLLO WEB</h2>
           </div>
           <br>
           <div>
@@ -68,9 +98,9 @@
     </div>
 
   </section>
-
+<div id="diseños"></div>
   <!--SECTION1 diseño 1-->
-  <section style="margin-bottom:5%;" data-aos="fade-up">
+  <section style="margin-bottom:5%;" data-aos="fade-up" >
     <nav class="text-center" style="margin-bottom:10%;">
       <div>
         <h1 class="textlog" style="margin: 0.5%;" data-aos="fade-up">NUESTROS DISEÑOS</h1>
@@ -92,7 +122,7 @@
         </div>
 
         <div class="animate__animated animate__heartBeat col-md-6">
-          <video class="videop" id="videoReser" src="/videos/RESERVA%20GO.mp4" autoplay loop muted style="width:110%;"
+          <video class="videop" id="videoReser" src="/videos/RESERVA%20GO.mp4" autoplay loop muted style="width:100%;"
             onclick="abrirvideo(this)" preload="none"></video>
 
         </div>
@@ -104,8 +134,8 @@
   </section>
 
 
-  <!--SECTION1 diseño 2-->
-  <section class="py-5"  data-aos="flip-left"> <!-- espacio vertical entre secciones -->
+  <!--SECTION2 diseño 2-->
+  <section class="py-5" data-aos="flip-left"> <!-- espacio vertical entre secciones -->
     <nav class="text-center mb-5">
       <div>
         <h1 class="textlog" data-aos="fade-up">NUESTROS DISEÑOS</h1>
@@ -113,11 +143,11 @@
     </nav>
 
     <div class="container text-center">
-      <div class="row align-items-center gx-5 gy-5"> <!-- espacio horizontal y vertical -->
+      <div class="row align-items-center gx-4 gy-4"> <!-- espacio horizontal y vertical -->
 
         <div class="col-md-6 animate__animated animate__jello mb-4">
-          <video class="videop" id="videoS" src="/videos/papeleria.mp4" autoplay loop muted
-            style="width: 100%; border-radius: 10px;" onclick="abrirvideo(this)" preload="none"></video>
+          <video class="img-fluid rounded w-100" id="videoS" src="/videos/papeleria.mp4" autoplay loop muted
+            onclick="abrirvideo(this)" preload="none"></video>
         </div>
 
         <div class="col-md-6 mb-4 text-md-start text-center"> <!-- alinea a la izq en grande, centrado en móvil -->
@@ -139,7 +169,7 @@
   </section>
 
 
-  <!--SECTION1 diseño 3-->
+  <!--SECTION3 diseño 3-->
   <section style="margin-bottom:5%;" data-aos="fade-up">
     <nav class="text-center" style="margin-bottom:10%;">
       <div>
@@ -162,7 +192,7 @@
         </div>
 
         <div class="animate__animated animate__bounceInUp col-md-6">
-          <video class="videop" id="videoReser" src="/videos/renta.mp4" autoplay loop muted style="width:110%;"
+          <video class="videop" id="videoReser" src="/videos/renta.mp4" autoplay loop muted style="width:100%;"
             onclick="abrirvideo(this)" preload="none"></video>
 
         </div>
@@ -173,7 +203,105 @@
     </div>
   </section>
 
+  <!--contactanos -->
+<div id="contacto"></div>
+  <section style="margin-bottom: 10%;">
+    <nav class="text-center" style="margin-bottom:10%;">
+      <div>
+        <h1 class="textlog" style="margin: 0.5%;" data-aos="fade-up">CONTACTANOS</h1>
+      </div>
+    </nav>
 
+    <div class="container text-center">
+      <div class="row align-items-center g-lg-5">
+        <div class="col-md-6 mb-4 ">
+          <div>
+            <div class="container mt-5">
+              <h2 class="mb-4 text-center">Formulario de Contacto</h2>
+              <form id="formularioContacto" class="p-4 shadow rounded contform" style="border: black 1px solid; ">
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre completo</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="mb-3 row">
+                  <div class="col-md-4">
+                    <label for="prefijo" class="form-label">Prefijo del país</label>
+                    <select class="form-select" id="prefijo" required>
+                      <option value="+57">🇨🇴 +57 (Colombia)</option>
+                      <option value="+1">🇺🇸 +1 (USA)</option>
+                      <option value="+34">🇪🇸 +34 (España)</option>
+                      <option value="+51">🇵🇪 +51 (Perú)</option>
+                      <option value="+52">🇲🇽 +52 (México)</option>
+                      <!-- agregar más opciones -->
+                    </select>
+                  </div>
+                  <div class="col-md-8">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" placeholder="Ej. 3001234567" required>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="correo" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."
+                    required></textarea>
+                </div>
+
+                <div class="text-center">
+                  <button type="submit" id="enviar" class="btn btn-primary">Enviar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <br>
+
+        </div>
+
+        <div class="animate__animated animate__bounceInRight col-md-6">
+
+          <img src="/Imagenes/forms.png" alt="Imagen de contacto" style="width: 80%;"
+            class="animate__animated animate__bounceInRight imgform" loading="lazy" />
+          <br>
+          <a href="https://storyset.com/online" target="_blank">Online illustrations by Storyset</a>
+        </div>
+        <h3 class="msjp"></h3>
+      </div>
+    </div>
+
+  </section>
+  <br>
+  <!--Final section -->
+
+  <section>
+
+  </section>
+
+
+  <!--fotter -->
+  <footer class=" text-white text-center py-5" style="background-color: #00BFFF;" data-aos="fade-up">
+    <div class="container ">
+      <h3 class="fw-bold mb-3">¿Listo para empezar?</h3>
+      <p class="mb-4 text-center">No necesitas saber de tecnología. Cuéntanos tu idea y nosotros la hacemos realidad.
+      </p>
+
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 mb-4">
+        <a onclick="wpp()" target="_blank" class="btn btn-outline-light px-4">💬 Escríbenos por
+          WhatsApp</a>
+        <span class="fw-bold">📞 Tel: +57 316 549 13 76 </span>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
+        <img src="/Imagenes/jrlogo.png" alt="" style="width: 10%;">
+        <a href="#quienes-somos" class="text-white text-decoration-underline">¿Quiénes somos?</a>
+      </div>
+    </div>
+  </footer>
 
 
 
@@ -199,8 +327,8 @@
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
 
-
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="/main.js" defer></script>

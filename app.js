@@ -63,6 +63,49 @@ app.get('/videos/:videoName', (req, res) => {
     }
 });
 
+
+app.post("/api/contacto", (req, res) => {
+
+    const datos = req.body;
+    
+    let nombre = datos.nombre;
+    let prefijo = datos.prefijo;
+    let telefono = datos.telefono;
+    let correo = datos.correo;
+    let mensaje = datos.mensaje;
+    console.log(typeof telefono);
+    
+
+    // Validar los datos recibidos
+
+    telefono = Number.parseInt(telefono); // Convertir a número entero
+    if (isNaN(telefono)) {
+        console.error("El teléfono no es un número válido.");
+        return res.status(400).json({ success: false, message: "El teléfono no es un número válido." });
+    }
+    if (!nombre || !prefijo || !telefono || !correo || !mensaje) {
+        console.error("Todos los campos son obligatorios.");
+        return res.status(400).json({ success: false, message: "Todos los campos son obligatorios." });
+    } 
+
+    let sql = `INSERT INTO cliente (NombreC, Prefijo, Telefono, Correo, Mjs) VALUES (?, ?, ?, ?, ?)`;
+    let values = [nombre, prefijo, telefono, correo, mensaje];
+
+    conexion.query(sql, values, (error, results) => {
+        if (error) {
+            console.error("Error al insertar datos:", error);
+            return res.status(500).json({ success: false, message: "Error al insertar datos" });
+        }
+        console.log("Datos insertados correctamente.");
+        return res.status(200).json({ success: true, message: "Datos insertados correctamente." });
+    });
+
+})
+
+
+
+
+
 // Inicia servidor
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);
