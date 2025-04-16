@@ -15,13 +15,14 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
 <body>
   <!--NAV-->
   <nav style="margin-bottom: 10%;">
-    <div class="container text-center">
+    <div class="container text-center"data-aos="fade-up" >
       <div class="row align-items-center">
         <div class="col">
 
@@ -42,13 +43,13 @@
   <!--NAV-->
 
   <!--SECTION1-->
-  <section style="margin-bottom: 24%;">
+  <section style="margin-bottom: 24%;" data-aos="fade-up">
 
     <div class="container text-center">
       <div class="row align-items-center">
         <div class="col">
           <div>
-            <h2 class="animate__animated animate__backInLeft ">DESARROLLO WEB</h2>
+            <h2 class="animate__animated animate__backInLeft " data-aos="fade-right" > DESARROLLO WEB</h2>
           </div>
           <br>
           <div>
@@ -60,7 +61,7 @@
         </div>
         <div class="col">
           <img src="/Imagenes/developer.gif" alt="Imagen de desarrollo" style="width: 80%;"
-            class="animate__animated animate__bounceInRight ">
+            class="animate__animated animate__bounceInRight " loading="lazy">
         </div>
 
       </div>
@@ -68,11 +69,11 @@
 
   </section>
 
-  <!--SECTION1-->
-  <section class="">
+  <!--SECTION1 diseño 1-->
+  <section style="margin-bottom:5%;" data-aos="fade-up">
     <nav class="text-center" style="margin-bottom:10%;">
       <div>
-        <h1 class="textlog" style="margin: 0.5%;">NUESTROS DISEÑOS</h1>
+        <h1 class="textlog" style="margin: 0.5%;" data-aos="fade-up">NUESTROS DISEÑOS</h1>
       </div>
     </nav>
 
@@ -80,7 +81,7 @@
       <div class="row align-items-center g-lg-5">
         <div class="col-md-6 mb-4 ">
           <div>
-            <h2 class="animate__animated animate__backInLeft">RESERVAS</h2>
+            <h2 class="animate__animated animate__backInLeft">RESERVAS GO!</h2>
           </div>
           <br>
           <div>
@@ -91,47 +92,118 @@
         </div>
 
         <div class="animate__animated animate__heartBeat col-md-6">
-          <video src="/videos/RESERVA%20GO.mp4" autoplay loop muted style="width:110%;" onclick="abrirvideo()"></video>
+          <video class="videop" id="videoReser" src="/videos/RESERVA%20GO.mp4" autoplay loop muted style="width:110%;"
+            onclick="abrirvideo(this)" preload="none"></video>
 
         </div>
       </div>
       <br>
       <br>
-      <h4>Click <a href="https://reservas-0rsg.onrender.com/" target="_blank">Aqui</a> para ver la pagina</h4>
+      <h5>Click <a href="https://reservas-0rsg.onrender.com/" target="_blank">Aqui</a> para ver la pagina</h5>
     </div>
+  </section>
 
+
+  <!--SECTION1 diseño 2-->
+  <section class="py-5"  data-aos="flip-left"> <!-- espacio vertical entre secciones -->
+    <nav class="text-center mb-5">
+      <div>
+        <h1 class="textlog" data-aos="fade-up">NUESTROS DISEÑOS</h1>
+      </div>
+    </nav>
+
+    <div class="container text-center">
+      <div class="row align-items-center gx-5 gy-5"> <!-- espacio horizontal y vertical -->
+
+        <div class="col-md-6 animate__animated animate__jello mb-4">
+          <video class="videop" id="videoS" src="/videos/papeleria.mp4" autoplay loop muted
+            style="width: 100%; border-radius: 10px;" onclick="abrirvideo(this)" preload="none"></video>
+        </div>
+
+        <div class="col-md-6 mb-4 text-md-start text-center"> <!-- alinea a la izq en grande, centrado en móvil -->
+          <div class="mb-3">
+            <h2 class="animate__animated animate__fadeInRight" style="text-align: center;">PAPELERIA S.</h2>
+          </div>
+          <div>
+            <p class="animate__animated animate__fadeInUp">
+              Web para gestión de inventarios, buen SEO y venta de artículos de papelería.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <h5 class="mt-5">Click <a href="https://25jt.github.io/PapeleriaS/index.html" target="_blank">Aquí</a> para ver la
+        página</h5>
+    </div>
+  </section>
+
+
+  <!--SECTION1 diseño 3-->
+  <section style="margin-bottom:5%;" data-aos="fade-up">
+    <nav class="text-center" style="margin-bottom:10%;">
+      <div>
+        <h1 class="textlog" style="margin: 0.5%;" data-aos="fade-up">NUESTROS DISEÑOS</h1>
+      </div>
+    </nav>
+
+    <div class="container text-center">
+      <div class="row align-items-center g-lg-5">
+        <div class="col-md-6 mb-4 ">
+          <div>
+            <h2 class="animate__animated animate__fadeInUp" data-aos="fade-right">RENTA DE VEHICULOS.</h2>
+          </div>
+          <br>
+          <div>
+            <p class="animate__animated animate__bounceIn">
+              Web desarrollada para la renta de vehiculos en la ciudad de cali y sus alrededores.
+            </p>
+          </div>
+        </div>
+
+        <div class="animate__animated animate__bounceInUp col-md-6">
+          <video class="videop" id="videoReser" src="/videos/renta.mp4" autoplay loop muted style="width:110%;"
+            onclick="abrirvideo(this)" preload="none"></video>
+
+        </div>
+      </div>
+      <br>
+      <br>
+      <h5>Click <a href="https://travelingrentacar.com/" target="_blank">Aqui</a> para ver la pagina</h5>
+    </div>
   </section>
 
 
 
 
+
   <!-- Modal para mostrar el video -->
-<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para hacerlo grande -->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="videoModalLabel">Reproduciendo video</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <video id="videoPlayer" width="100%" controls autoplay>
-          <source src="/videos/RESERVA%20GO.mp4" type="video/mp4">
-          Tu navegador no soporta video HTML5.
-        </video>
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel">
+    <div class="modal-dialog modal-dialog-centered modal-xl"> <!-- modal-lg para hacerlo grande -->
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #00BFFF;">
+          <h4 class="modal-title" id="videoModalLabel">JR WEB</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <video id="videoPlayer" width="100%" controls autoplay>
+            <source src="" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+          </video>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/main.js" defer></script>
 </body>
 
 </html>

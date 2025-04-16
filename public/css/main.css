@@ -18,22 +18,34 @@ h1 {
     font-family: Fugaz One, sans-serif;
 
 }
+h2{
+  font-family: Fugaz One, sans-serif;
+  font-size: 5rem !important;
+}
 
+p{
+  text-align: justify;
+  font-family: manjari-thin, sans-serif;
+  font-size: 1.5rem;
+}
+h4 {
+    color: white !important;
+    font-family: Fugaz One, sans-serif;
+    font-size: 2rem !important;
+}
 nav {
     border: 2px solid black;
     border-radius: 16px;
     background-color: #00BFFF;
 }
-h2{
-    font-family: Fugaz One, sans-serif;
-    font-size: 5rem !important;
+
+.videop{
+  border: black 2px solid;
+  border-radius: 16px;
+  box-shadow: black 5px 5px, black 8px 8px, black 10px 10px;
+  transition-duration: 0.5s !important;
 }
 
-p{
-    text-align: justify;
-    font-family: manjari-thin, sans-serif;
-    font-size: 1.5rem;
-}
 
 /* From Uiverse.io by alexreyes091 */ 
 /*Boton nav*/ 

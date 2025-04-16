@@ -1,15 +1,27 @@
-
+AOS.init({
+  duration: 1000,
+  once: true, // solo se anima una vez
+});
 
 document.getElementsByClassName("textlog")[0].innerHTML = "JR WEB";
 console.log("Hola mundo desde main.js");
 
-function abrirvideo() {
-    const video = document.getElementById('videoPlayer');
-    video.currentTime = 0; // Reinicia
-    video.play();
+function abrirvideo(elementoVideo) {
+  const ruta = elementoVideo.getAttribute("src"); // Captura el src del video clickeado
+  const video = document.getElementById('videoPlayer'); // El del modal
+
   
-    const modal = new bootstrap.Modal(document.getElementById('videoModal'));
-    modal.show();
-  }
-  
+
+  video.src = ruta;
+  video.load();
+  video.currentTime = 0;
+  video.play();
+
+  const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+  modal.show();
+}
+
+
+
+
 
