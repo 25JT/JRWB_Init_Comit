@@ -3,6 +3,13 @@ import express from "express";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+
+import  { envcorreo }  from './public/sendMail.js';
+
+dotenv.config();
+
+
 
 // Configuración para usar __dirname en ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -73,7 +80,7 @@ app.post("/api/contacto", (req, res) => {
     let telefono = datos.telefono;
     let correo = datos.correo;
     let mensaje = datos.mensaje;
-    console.log(typeof telefono);
+    
     
 
     // Validar los datos recibidos
@@ -97,12 +104,35 @@ app.post("/api/contacto", (req, res) => {
             return res.status(500).json({ success: false, message: "Error al insertar datos" });
         }
         console.log("Datos insertados correctamente.");
+        //Envio mensaje gmail
+
+        envcorreo(`Consulta de web para ${nombre} `, `CLIENTE PARA PAGINA \n NOMBRE: ${nombre}, \n TELEFONO ${telefono} \n CORREO ${correo} \n MENSAJES: ${mensaje} `); // Llama a la función de envío de correo
+                    
         return res.status(200).json({ success: true, message: "Datos insertados correctamente." });
+
+    
     });
 
 })
 
+//export 
 
+app.get("/api/env", (req, res) => {
+    const key = req.headers["x-api-key"];
+
+    if (key !== process.env.SECRETA_API_KEY) {
+        return res.status(401).json({ error: "No autorizado" });
+      }
+
+    res.json({
+      numero: process.env.numero // Solo cosas seguras
+    });
+  });
+
+//404
+app.use((req, res) => {
+    res.status(404).send('Página no encontrada');
+});
 
 
 

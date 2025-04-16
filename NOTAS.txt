@@ -7,3 +7,8 @@ uso de livereload
 
 animaciones
  npm install animate.css --save
+
+correo
+npm install nodemailer
+
+ 

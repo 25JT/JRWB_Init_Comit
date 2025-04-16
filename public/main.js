@@ -69,7 +69,7 @@ async function manejarEnvioFormulario(event) {
       text: data.message,
       icon: data.success ? "success" : "error",
       confirmButtonText: "Aceptar",
-      className: "swal-custom",
+      
       customClass: {
         confirmButton: "btn"
       },
@@ -90,9 +90,18 @@ async function manejarEnvioFormulario(event) {
 //wpp
 
 function wpp(){
-  const numero = 3165491376
+  fetch("/api/env")
   
-  window.open(`https://api.whatsapp.com/send?phone=57${numero}&text=Hola%20JR%20WEB,%20quiero%20más%20información%20sobre%20sus%20servicios.`, "_blank");
+  .then(response => response.json())
+  .then(data => { 
+        
+    numero = data.numero; // Solo cosas seguras
+    window.open(`https://api.whatsapp.com/send?phone=57${numero}&text=Hola%20JR%20WEB,%20quiero%20más%20información%20sobre%20sus%20servicios.`, "_blank");
+  })
+  .catch(error => console.error('Error:', error));
+  
+  
+ 
 }
 
 
